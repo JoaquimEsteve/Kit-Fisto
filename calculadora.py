@@ -1,34 +1,21 @@
-print("Digite o número.")
-a=float(input())
-print("Qual a operação desejada?")
-c=input()
+import tkinter as tk
 
-c=c.lower()
 
-if c=="ao quadrado":
-    print(a**2)
-    quit()
+def inserir_texto(x):
+    texto.insert(1.0,x)
 
-if c=="raiz quadrada":
-    print(a**0.5)
-    quit()
+janela=tk.Tk()
 
-if c=="1/x":
-    print(1/a)
-    quit()
 
-print("Digite um segundo número.")
-b=float(input())
-print("Resultado:")
 
-if c=="*":
-    print(a*b)
 
-elif c=="/":
-    print(a/b)
+janela.geometry ("400x400")
 
-elif c=="+":
-    print(a+b)
+texto=tk.Text(janela,height=4, width=16,font=("Fixedsys", 24))
+texto.grid(columnspan=4)
 
-elif c=="-":
-    print(a-b)
+botao1=tk.Button(janela, text="1", command=lambda:inserir_texto("1"), width=5, height=3, font=("Fixedsys", 12))
+botao1.grid(column=1, row=2)
+
+
+janela.mainloop()
