@@ -12,7 +12,7 @@ def jogar_pedra_papel_tesoura():
     escolha_computador = random.randint(1, 3)
 
     print("Você escolheu:", opcoes[escolha_usuario - 1])
-    print("O computador escolheu:", opcoes[escolha_computador - 1])
+    print("O computador escolheu:", opcoes[escolha_computador - 1]) #Para corresponder ao "-1" do opções, o de baixo também necessita de um "-1", assim, fazendo o código funcionar.   
 
     if escolha_usuario == escolha_computador:
         print("Empate!")
